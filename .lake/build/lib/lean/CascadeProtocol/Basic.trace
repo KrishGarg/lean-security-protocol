@@ -1,12 +1,12 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["629acb30894f82ed.olean"],
+ {"o": ["30107c972e7886c8.olean"],
   "i": "4c92e8ed4851ee77.ilean",
   "c": "2eccc657dcee51e6.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean /Users/farhandhattiwala/.elan/toolchains/leanprover--lean4---v4.29.0/bin/lean /Users/farhandhattiwala/RC_Proj/lean-security-protocol/CascadeProtocol/Basic.lean -o /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.olean -i /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.ilean -c /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/ir/CascadeProtocol/Basic.c --setup /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/ir/CascadeProtocol/Basic.setup.json --json",
+   ".> LEAN_PATH=D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean c:\\Users\\KRISH\\.elan\\toolchains\\leanprover--lean4---v4.29.0\\bin\\lean.exe D:\\My Stuff\\course work\\rc (a baskar)\\project\\CascadeProtocol\\Basic.lean -o D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean\\CascadeProtocol\\Basic.olean -i D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean\\CascadeProtocol\\Basic.ilean -c D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\ir\\CascadeProtocol\\Basic.c --setup D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\ir\\CascadeProtocol\\Basic.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["CascadeProtocol.Basic:deps",
@@ -21,11 +21,11 @@
       ["module plugins", "00000000000006bb"]]]]],
   ["Lean 4.29.0, commit 98dc76e3c0a9b856c9b98726b713fb04fab16740",
    "60bb08ef22408c8a"],
-  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/CascadeProtocol/Basic.lean",
-   "6355d4de65cfed98"],
+  ["D:\\My Stuff\\course work\\rc (a baskar)\\project\\CascadeProtocol\\Basic.lean",
+   "479a5e062b1629bb"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: CascadeProtocol.Basic", "43bcb04f2052dde3"],
   ["Package.id?: (some cascade_protocol)", "9f9a66f123979b2f"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "adf93842421678f1"}
+ "depHash": "46d308228f79b6ad"}

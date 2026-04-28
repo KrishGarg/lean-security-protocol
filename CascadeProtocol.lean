@@ -9,26 +9,22 @@ import CascadeProtocol.Examples
 /-!
 # Two-Party Cascade Protocol Security Checker
 
-Formalization of the security checker for two-party cascade protocols
-from algebraic protocol theory (cf. Dolev–Even, Theorem 6.2.6).
+This project is a security checker for two-party cascade protocols. 
+It helps us verify if a protocol is secure based on mathematical rules.
 
-## Design Choices
+## How it works
 
-1. **User parameter convention in security checks.**
-   "Balancing w.r.t. X" for αᵢ directly passes `X` to `hasBalancingProperty`:
-   `hasBalancingProperty αᵢ X` checks that if `D X` occurs then `E X` also
-   occurs.  Dually, `hasBalancingProperty βⱼ Y` checks Y-balance in β words.
+1. **Checking user balance.**
+   We check if a sequence is balanced for a user (like user X).
+   If we see a decryption for X, we make sure there's also an encryption for X.
 
-2. **Partiality / list indexing.**
-   `isSecureSymmetric` pattern-matches on the protocol's α-list, returning
-   `false` for empty protocols. The theorem statement uses `p.1.head!` (which
-   defaults to `[]` for an empty list via `Inhabited (List _)`). We note this
-   partiality but keep it to match the standard statement.
+2. **Handling empty lists.**
+   If a protocol doesn't have any messages, we just say it's not secure (return false).
 
-3. **Reduction fuel.**
-   `reduceAux` uses `w.length` as fuel (each reduction shortens the word by 2,
-   so `w.length / 2` steps suffice). This avoids `partial`.
+3. **Making sure loops stop.**
+   When we simplify sequences, we limit the number of steps based on the sequence length.
+   This guarantees our code doesn't get stuck in an endless loop.
 
-4. **No Mathlib dependency.**
-   We state membership via `List.Mem` (core Lean 4) instead of `Finset`.
+4. **Keeping it simple.**
+   We use basic Lean 4 lists instead of complex math libraries.
 -/

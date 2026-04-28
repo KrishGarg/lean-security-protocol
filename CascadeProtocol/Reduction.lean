@@ -6,23 +6,20 @@ open User Func
 # Rewriting / Reduction
 -/
 
-/-- Two adjacent functions cancel under **symmetric** semantics (T₁):
-    both `D u ∘ E u = id` and `E u ∘ D u = id`. -/
+/-- In symmetric encryption, encrypting then decrypting (or vice versa) cancels out. -/
 def cancelsSymmetric (f g : Func) : Bool :=
   match f, g with
   | E u₁, D u₂ => u₁ == u₂
   | D u₁, E u₂ => u₁ == u₂
   | _, _        => false
 
-/-- Two adjacent functions cancel under **nonsymmetric** semantics (T₂):
-    only `D u ∘ E u = id`.  In composition (left-to-right) list order
-    this is `D u` followed by `E u`. -/
+/-- In nonsymmetric encryption, only decrypting then encrypting cancels out. -/
 def cancelsNonsymmetric (f g : Func) : Bool :=
   match f, g with
   | D u₁, E u₂ => u₁ == u₂
   | _, _        => false
 
-/-- One-pass scan: remove the first adjacent cancelling pair, if any. -/
+/-- We look through the sequence once and remove the first pair that cancels out. -/
 def reduceOnce (cancel : Func → Func → Bool) : Word → Option Word
   | []  => none
   | [_] => none
@@ -32,8 +29,8 @@ def reduceOnce (cancel : Func → Func → Bool) : Word → Option Word
          | some w => some (f :: w)
          | none   => none
 
-/-- Iteratively reduce until no cancelling pair remains.
-    `fuel` bounds the number of reduction steps (each step removes 2 symbols). -/
+/-- We keep simplifying the sequence until nothing else cancels out. 
+    We use a limit so it doesn't run forever. -/
 def reduceAux (cancel : Func → Func → Bool) : Nat → Word → Word
   | 0,        w => w
   | fuel + 1, w =>
@@ -41,7 +38,7 @@ def reduceAux (cancel : Func → Func → Bool) : Nat → Word → Word
     | none   => w
     | some w' => reduceAux cancel fuel w'
 
-/-- Reduce a word to its normal form under the given cancellation rule. -/
+/-- Simplify the sequence completely. -/
 def reduceWord (cancel : Func → Func → Bool) (w : Word) : Word :=
   reduceAux cancel w.length w
 

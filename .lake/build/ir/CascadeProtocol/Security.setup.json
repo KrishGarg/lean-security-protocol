@@ -5,7 +5,7 @@
  "isModule": false,
  "importArts":
  {"CascadeProtocol.Predicates":
-  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Predicates.olean"],
+  ["D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean\\CascadeProtocol\\Predicates.olean"],
   "CascadeProtocol.Basic":
-  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.olean"]},
+  ["D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean\\CascadeProtocol\\Basic.olean"]},
  "dynlibs": []}

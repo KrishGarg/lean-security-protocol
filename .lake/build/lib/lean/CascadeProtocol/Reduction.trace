@@ -1,12 +1,12 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["4f0dc0503943ee87.olean"],
-  "i": "df436a59aba5ce60.ilean",
+ {"o": ["86c3ed9d4eee3386.olean"],
+  "i": "00ae900c35f87ad6.ilean",
   "c": "231f37e177caf5fe.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean /Users/farhandhattiwala/.elan/toolchains/leanprover--lean4---v4.29.0/bin/lean /Users/farhandhattiwala/RC_Proj/lean-security-protocol/CascadeProtocol/Reduction.lean -o /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Reduction.olean -i /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Reduction.ilean -c /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/ir/CascadeProtocol/Reduction.c --setup /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/ir/CascadeProtocol/Reduction.setup.json --json",
+   ".> LEAN_PATH=D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean c:\\Users\\KRISH\\.elan\\toolchains\\leanprover--lean4---v4.29.0\\bin\\lean.exe D:\\My Stuff\\course work\\rc (a baskar)\\project\\CascadeProtocol\\Reduction.lean -o D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean\\CascadeProtocol\\Reduction.olean -i D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\lib\\lean\\CascadeProtocol\\Reduction.ilean -c D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\ir\\CascadeProtocol\\Reduction.c --setup D:\\My Stuff\\course work\\rc (a baskar)\\project\\.lake\\build\\ir\\CascadeProtocol\\Reduction.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["CascadeProtocol.Reduction:deps",
@@ -16,7 +16,7 @@
       ["imports",
        [["CascadeProtocol.Basic transitive imports (legacy)",
          "00000000000006bb"],
-        ["CascadeProtocol.Basic:importAllArts", "cd42ed5f70ccf188"]]]]],
+        ["CascadeProtocol.Basic:importAllArts", "b6d4745c8f8b7989"]]]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -24,11 +24,11 @@
       ["module plugins", "00000000000006bb"]]]]],
   ["Lean 4.29.0, commit 98dc76e3c0a9b856c9b98726b713fb04fab16740",
    "60bb08ef22408c8a"],
-  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/CascadeProtocol/Reduction.lean",
-   "9b901c6ed0ce3afe"],
+  ["D:\\My Stuff\\course work\\rc (a baskar)\\project\\CascadeProtocol\\Reduction.lean",
+   "4407a6ee93410717"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: CascadeProtocol.Reduction", "e9ba6ddb0822dd02"],
   ["Package.id?: (some cascade_protocol)", "9f9a66f123979b2f"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "6dfbf42f45619ce1"}
+ "depHash": "d9b199865d56c6a9"}

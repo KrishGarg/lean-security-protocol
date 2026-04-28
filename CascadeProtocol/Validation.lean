@@ -8,26 +8,21 @@ open User Func
 # Input Validation (Irreducibility Enforcement)
 -/
 
-/-- A word is **irreducible** under a cancellation semantics iff
-    reducing it yields the same word (no adjacent pair cancels).
-    Cf. Dolev–Even Definitions 6.1.2 & 6.1.3: all αᵢ, βⱼ in a
-    valid protocol are assumed to be irreducible. -/
+/-- A sequence is "irreducible" if nothing cancels out when we try to simplify it. -/
 def isIrreducible (cancel : Func → Func → Bool) (w : Word) : Bool :=
   (reduceWord cancel w) == w
 
-/-- Check that every word in a protocol is already irreducible
-    under the given cancellation rule. -/
+/-- Check that every sequence in the protocol can't be simplified any further. -/
 def allWordsIrreducible (cancel : Func → Func → Bool) (p : Protocol) : Bool :=
   p.1.all (isIrreducible cancel) && p.2.all (isIrreducible cancel)
 
-/-- **Protocol validity**: all αᵢ and βⱼ must be irreducible under
-    the intended semantics before the security check is meaningful. -/
+/-- Check if the whole protocol is valid before we even try to see if it's secure. -/
 def isProtocolIrreducibleSymmetric    (p : Protocol) : Bool :=
   allWordsIrreducible cancelsSymmetric p
 def isProtocolIrreducibleNonsymmetric (p : Protocol) : Bool :=
   allWordsIrreducible cancelsNonsymmetric p
 
-/-- Guarded symmetric security check: rejects invalid (reducible) protocols. -/
+/-- Check symmetric security, but throw an error if the protocol isn't even valid. -/
 def checkSecureSymmetric (p : Protocol) : String :=
   if !isProtocolIrreducibleSymmetric p then
     "INVALID – protocol contains reducible words"
@@ -36,7 +31,7 @@ def checkSecureSymmetric (p : Protocol) : String :=
   else
     "INSECURE (symmetric)"
 
-/-- Guarded nonsymmetric security check: rejects invalid (reducible) protocols. -/
+/-- Check nonsymmetric security, but throw an error if the protocol isn't even valid. -/
 def checkSecureNonsymmetric (p : Protocol) : String :=
   if !isProtocolIrreducibleNonsymmetric p then
     "INVALID – protocol contains reducible words"

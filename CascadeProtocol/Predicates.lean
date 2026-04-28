@@ -6,24 +6,24 @@ open User Func
 # Predicates for Security Checking
 -/
 
-/-- Does `w` contain at least one encryption function? -/
+/-- Check if the sequence has any encryption in it. -/
 def hasEncryption (w : Word) : Bool :=
   w.any fun f => match f with | E _ => true | D _ => false
 
-/-- Does `w` contain at least one decryption function? -/
+/-- Check if the sequence has any decryption in it. -/
 def hasDecryption (w : Word) : Bool :=
   w.any fun f => match f with | D _ => true | E _ => false
 
-/-- Does `w` contain the function `f`? -/
+/-- Check if a specific action (like encrypting for user X) is in the sequence. -/
 def containsFunc (w : Word) (f : Func) : Bool :=
   w.any (· == f)
 
-/-- **Balancing property**: if `D u` occurs in `w`, then `E u` must also occur.
-    Intuitively, the adversary cannot net-remove `u`'s encryption layer. -/
+/-- This makes sure that if a user decrypts something, they also encrypt it somewhere. 
+    This prevents attackers from completely removing a user's protection. -/
 def hasBalancingProperty (w : Word) (u : User) : Bool :=
   if containsFunc w (D u) then containsFunc w (E u) else true
 
-/-- Does `w` contain the adjacent factor `[f, g]`? -/
+/-- Check if two specific actions happen right next to each other. -/
 def containsAdjacentPair : Word → Func → Func → Bool
   | [],          _, _ => false
   | [_],         _, _ => false

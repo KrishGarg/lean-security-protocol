@@ -7,12 +7,8 @@ open User Func
 # Security Decision Procedures
 -/
 
-/-- **Symmetric cascade security** (Theorem 6.2.6, symmetric case).
-
-    A protocol `(αs, βs)` is secure iff:
-    1. α₁ contains at least one encryption,
-    2. every αᵢ (i ≥ 2) is balanced w.r.t. X,
-    3. every βⱼ (j ≥ 1) is balanced w.r.t. Y. -/
+/-- Checks if a protocol is secure under symmetric rules.
+    It needs an initial encryption, and both parties must stay balanced. -/
 def isSecureSymmetric (p : Protocol) : Bool :=
   match p.1 with
   | []       => false
@@ -21,10 +17,8 @@ def isSecureSymmetric (p : Protocol) : Bool :=
     αs.all (fun α => hasBalancingProperty α X) &&
     p.2.all (fun β => hasBalancingProperty β Y)
 
-/-- **Nonsymmetric cascade security** (Theorem 6.2.6, nonsymmetric case).
-
-    Secure iff α₁ contains a decryption, **or** (α₁ contains encryption **and**
-    every subsequent α / every β satisfies a disjunctive balancing condition). -/
+/-- Checks if a protocol is secure under nonsymmetric rules. 
+    This has slightly different balancing requirements. -/
 def isSecureNonsymmetric (p : Protocol) : Bool :=
   match p.1 with
   | []       => false
