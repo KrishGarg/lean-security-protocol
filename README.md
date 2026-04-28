@@ -40,3 +40,14 @@ Make sure you have [elan](https://github.com/leanprover/elan) and Lean 4 install
 
 * **Proving the Correctness Theorems**: The ultimate goal is to replace the `sorry` stubs in `Theorems.lean` with actual mathematical proofs. This includes proving `balancing_correct`, `symmetric_cascade_secure_iff`, and `reduceSymmetric_sound` to formally bind the computational functions to the exact Dolev-Even characterizations.
 * **Inverse String Generation for Insecure Protocols**: Currently, the checker evaluates whether a protocol is secure or insecure (boolean output). A major future improvement is to implement an algorithm that computes and outputs the exact "inverse string" (the sabotage sequence) that breaks the protocol when it is deemed insecure.
+
+## Authors
+
+This project is done by:
+1) Krish Garg (2024A7PS0642G)
+2) Farhan Anzar Dhattiwala (2024A7PS0562G)
+3) Gauravi Srinivas (2024A7PS0007G)
+4) Doctor Divya Kunal (2024A7PS0583G)
+5) Samarth Khurana (2024A7PS0622G)
+
+It was done as part of a Reading Course done under **Dr. A Baskar** in the Second Semester of the academic year 2025-26 in BITS Pilani, K. K. Birla Goa Campus.
