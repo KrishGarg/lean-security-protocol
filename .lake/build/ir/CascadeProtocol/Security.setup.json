@@ -1,0 +1,11 @@
+{"plugins": [],
+ "package": "cascade_protocol",
+ "options": {},
+ "name": "CascadeProtocol.Security",
+ "isModule": false,
+ "importArts":
+ {"CascadeProtocol.Predicates":
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Predicates.olean"],
+  "CascadeProtocol.Basic":
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.olean"]},
+ "dynlibs": []}

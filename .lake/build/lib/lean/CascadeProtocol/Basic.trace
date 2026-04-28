@@ -1,0 +1,31 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["629acb30894f82ed.olean"],
+  "i": "4c92e8ed4851ee77.ilean",
+  "c": "2eccc657dcee51e6.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean /Users/farhandhattiwala/.elan/toolchains/leanprover--lean4---v4.29.0/bin/lean /Users/farhandhattiwala/RC_Proj/lean-security-protocol/CascadeProtocol/Basic.lean -o /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.olean -i /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.ilean -c /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/ir/CascadeProtocol/Basic.c --setup /Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/ir/CascadeProtocol/Basic.setup.json --json",
+   "level": "trace"}],
+ "inputs":
+ [["CascadeProtocol.Basic:deps",
+   [["deps",
+     [["cascade_protocol/CascadeProtocol:extraDep",
+       [["@cascade_protocol:extraDep", "00000000000006bb"]]],
+      ["imports", "00000000000006bb"]]],
+    ["libs",
+     [["import dynlibs", "00000000000006bb"],
+      ["package external libraries", "00000000000006bb"],
+      ["module dynlibs", "00000000000006bb"],
+      ["module plugins", "00000000000006bb"]]]]],
+  ["Lean 4.29.0, commit 98dc76e3c0a9b856c9b98726b713fb04fab16740",
+   "60bb08ef22408c8a"],
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/CascadeProtocol/Basic.lean",
+   "6355d4de65cfed98"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: CascadeProtocol.Basic", "43bcb04f2052dde3"],
+  ["Package.id?: (some cascade_protocol)", "9f9a66f123979b2f"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "adf93842421678f1"}

@@ -1,0 +1,15 @@
+{"plugins": [],
+ "package": "cascade_protocol",
+ "options": {},
+ "name": "CascadeProtocol.Theorems",
+ "isModule": false,
+ "importArts":
+ {"CascadeProtocol.Security":
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Security.olean"],
+  "CascadeProtocol.Reduction":
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Reduction.olean"],
+  "CascadeProtocol.Predicates":
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Predicates.olean"],
+  "CascadeProtocol.Basic":
+  ["/Users/farhandhattiwala/RC_Proj/lean-security-protocol/.lake/build/lib/lean/CascadeProtocol/Basic.olean"]},
+ "dynlibs": []}
